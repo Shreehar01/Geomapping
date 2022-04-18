@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project 2 (Geocoding)</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin="">
+    </script>
+
+    
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" />
+    
+    <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body onload='initialization()'>
+    <section id="mapContainer">
+        <form>
+            <input type="text" placeholder="Search the location" id="locationText" name="locationText" required>
+            <button type="button" onclick='findAddress()'>Add</button>    
+        </form>
+        <div id = "myMap"></div>
+    </section>
+    <section id="addressList">
+        <ul id="addressValues"></ul>
+    </section>
+</body>
+<script src="index.js"></script>
+
+</html>
